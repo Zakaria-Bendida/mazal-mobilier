@@ -164,32 +164,6 @@ export function ClientEffects() {
       filterHandlers.forEach(([btn, handler]) => btn.removeEventListener("click", handler));
     });
 
-    // Contact form
-    const contactForm = document.getElementById("contactForm") as HTMLFormElement | null;
-    if (contactForm) {
-      const onSubmit = (e: Event) => {
-        e.preventDefault();
-        const successBox = document.getElementById("formSuccess");
-        const btn = contactForm.querySelector("button") as HTMLButtonElement | null;
-        if (btn) {
-          const originalText = btn.textContent || "";
-          btn.textContent = "Envoi en cours...";
-          btn.disabled = true;
-          setTimeout(() => {
-            contactForm.reset();
-            btn.textContent = originalText;
-            btn.disabled = false;
-            if (successBox) {
-              successBox.classList.add("show");
-              setTimeout(() => successBox.classList.remove("show"), 6000);
-            }
-          }, 1200);
-        }
-      };
-      contactForm.addEventListener("submit", onSubmit);
-      cleanups.push(() => contactForm.removeEventListener("submit", onSubmit));
-    }
-
     return () => {
       cleanups.forEach((fn) => fn());
     };

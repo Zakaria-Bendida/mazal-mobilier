@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLang } from "@/app/lib/LangContext";
 import { Header } from "@/app/components/Header";
 import { Footer } from "@/app/components/Footer";
@@ -7,6 +8,22 @@ import { ClientEffects } from "@/app/components/ClientEffects";
 
 export default function Contact() {
   const { t } = useLang();
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = data.get("name") || "";
+    const email = data.get("email") || "";
+    const project = data.get("project") || "";
+    const message = data.get("message") || "";
+
+    const body = `Nom: ${name}%0AEmail: ${email}%0AProjet: ${project}%0A%0A${message}`;
+    window.location.href = `mailto:DevForge@gmail.com?subject=Demande de contact — ${project}&body=${body}`;
+    setSent(true);
+    form.reset();
+  };
 
   return (
     <>
@@ -24,7 +41,7 @@ export default function Contact() {
       <section id="contact-form" style={{ paddingTop: 40 }}>
         <div className="wrap contact-grid">
           <div>
-            <form className="contact-form" id="contactForm">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">{t("contact_form_name")}</label>
                 <input type="text" id="name" name="name" required placeholder="Camille Dubreuil" />
@@ -42,7 +59,9 @@ export default function Contact() {
                 <textarea id="message" name="message" required placeholder="Décrivez votre espace, vos délais, votre budget approximatif..." />
               </div>
               <button type="submit" className="cta-btn filled">{t("contact_form_btn")}</button>
-              <div className="form-success" id="formSuccess">{t("contact_form_success")}</div>
+              {sent && (
+                <div className="form-success show">{t("contact_form_success")}</div>
+              )}
             </form>
           </div>
 
