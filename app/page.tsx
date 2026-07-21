@@ -85,7 +85,7 @@ export default function Home() {
             ].map((c, i) => (
               <article className="coll-card" key={i}>
                 <div className="coll-swatch">
-                  <img src={c.img} alt={c.h3} />
+                  <img src={c.img} alt={c.h3} loading="lazy" width="340" height="300" />
                 </div>
                 <div className="coll-info">
                   <span className="eyebrow">{c.eyebrow}</span>

@@ -52,7 +52,7 @@ export default function Services() {
       <ClientEffects />
       <Header />
 
-      <section className="page-hero photo" style={{ backgroundImage: "linear-gradient(180deg, rgba(26,23,20,0.3) 0%, rgba(26,23,20,0.85) 80%), url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?fm=jpg&q=70&w=1800&auto=format&fit=crop')" }}>
+      <section className="page-hero photo" style={{ backgroundImage: "linear-gradient(180deg, rgba(26,23,20,0.3) 0%, rgba(26,23,20,0.85) 80%), url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?fm=jpg&q=60&w=1200&auto=format&fit=crop')" }}>
         <div className="wrap">
           <span className="eyebrow">{t("services_eyebrow")}</span>
           <h1 style={{ marginTop: 16 }}>{t("services_title")}<em>{t("services_title_em")}</em>{t("services_title_2")}</h1>

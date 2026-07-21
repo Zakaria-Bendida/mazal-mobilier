@@ -1,7 +1,29 @@
 import type { Metadata } from "next";
+import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "./lib/LangContext";
 import { Preloader } from "./components/Preloader";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   title: "MAZAL — Mobilier façonné à la main",
@@ -23,19 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+      <body className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
         <LangProvider>
           <Preloader />
           {children}
