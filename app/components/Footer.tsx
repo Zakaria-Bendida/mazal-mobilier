@@ -42,7 +42,7 @@ export function Footer() {
           <span>&copy; 2026 MAZAL Mobilier. Tous droits réservés.</span>
           <div style={{ display: "flex", gap: 20 }}>
             <Link href="/mentions">Mentions légales</Link>
-            <a href="#">Politique de confidentialité</a>
+            <span>Politique de confidentialité</span>
           </div>
         </div>
       </div>

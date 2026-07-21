@@ -17,7 +17,7 @@ export default function Home() {
       <main>
       {/* HERO */}
       <section className="hero">
-        <svg className="rings-bg" viewBox="0 0 900 900">
+        <svg className="rings-bg" viewBox="0 0 900 900" aria-hidden="true">
           <circle className="ring-draw" cx="450" cy="450" r="120" style={{ animationDelay: "0.1s" }} />
           <circle className="ring-draw" cx="450" cy="450" r="190" style={{ animationDelay: "0.25s" }} />
           <circle className="ring-draw accent" cx="450" cy="450" r="255" style={{ animationDelay: "0.4s" }} />
@@ -39,11 +39,11 @@ export default function Home() {
           </div>
         </div>
         <div className="scroll-cue">
-          <span>{t("hero_scroll")}</span><span className="stem" />
+          <span>{t("hero_scroll")}</span><span className="stem" aria-hidden="true" />
         </div>
       </section>
 
-      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,32 C150,10 250,54 400,32 C550,10 650,54 800,32 C950,10 1050,54 1200,32" />
         <path className="a2" d="M0,40 C150,20 250,60 400,40 C550,20 650,60 800,40 C950,20 1050,60 1200,40" />
       </svg>
@@ -58,13 +58,13 @@ export default function Home() {
             <p>{t("phil_p1")}</p>
             <p>{t("phil_p2")}</p>
             <div className="phil-sign">
-              <span className="dot" />{t("phil_sign")}
+              <span className="dot" aria-hidden="true" />{t("phil_sign")}
             </div>
           </div>
         </div>
       </section>
 
-      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,32 C150,54 250,10 400,32 C550,54 650,10 800,32 C950,54 1050,10 1200,32" />
         <path className="a2" d="M0,24 C150,46 250,4 400,24 C550,46 650,4 800,24 C950,46 1050,4 1200,24" />
       </svg>
@@ -106,14 +106,14 @@ export default function Home() {
         </div>
       </section>
 
-      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,32 C150,10 250,54 400,32 C550,10 650,54 800,32 C950,10 1050,54 1200,32" />
         <path className="a2" d="M0,40 C150,20 250,60 400,40 C550,20 650,60 800,40 C950,20 1050,60 1200,40" />
       </svg>
 
       {/* STATS */}
       <section className="stats">
-        <svg className="stats-rings" viewBox="0 0 1100 1100">
+        <svg className="stats-rings" viewBox="0 0 1100 1100" aria-hidden="true">
           <circle cx="550" cy="550" r="180" />
           <circle cx="550" cy="550" r="280" />
           <circle cx="550" cy="550" r="380" />

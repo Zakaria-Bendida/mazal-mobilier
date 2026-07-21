@@ -15,7 +15,7 @@ export function Preloader() {
   }, []);
 
   return (
-    <div id="preloader" ref={ref}>
+    <div id="preloader" ref={ref} aria-hidden="true">
       <div className="pl-inner">
         <div className="pl-logo">
           <svg viewBox="0 0 40 40" width="26" height="26">

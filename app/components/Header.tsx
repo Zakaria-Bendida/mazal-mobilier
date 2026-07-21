@@ -73,7 +73,7 @@ export function Header() {
           <button
             className={`nav-toggle ${mobileOpen ? "open" : ""}`}
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Ouvrir le menu"
+            aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
             <span />
           </button>

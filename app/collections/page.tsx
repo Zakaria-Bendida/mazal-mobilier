@@ -93,7 +93,7 @@ export default function Collections() {
       {selected !== null && (
         <div className="detail-overlay" onClick={closeCard}>
           <div className="detail-card" onClick={(e) => e.stopPropagation()}>
-            <button className="detail-close" onClick={closeCard}>&times;</button>
+            <button className="detail-close" onClick={closeCard} aria-label="Fermer">&times;</button>
             <div className="detail-layout">
               <div className="detail-img">
                 <Image

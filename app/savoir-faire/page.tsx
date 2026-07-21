@@ -47,7 +47,7 @@ export default function SavoirFaire() {
         </div>
       </section>
 
-      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <svg className="grain-divider" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,32 C150,10 250,54 400,32 C550,10 650,54 800,32 C950,10 1050,54 1200,32" />
         <path className="a2" d="M0,40 C150,20 250,60 400,40 C550,20 650,60 800,40 C950,20 1050,60 1200,40" />
       </svg>
@@ -87,7 +87,7 @@ export default function SavoirFaire() {
           <div className="phil-body reveal">
             <p>L&apos;atelier compte sept personnes : trois ébénistes, deux apprentis, une designer et Julien, qui dessine chaque collection. Personne ne touche une commande client avant d&apos;avoir passé au moins un an sur les pièces d&apos;exposition.</p>
             <p>Nous formons nos propres apprentis parce qu&apos;aucune école ne peut enseigner la manière MAZAL de lire une planche.</p>
-            <div className="phil-sign"><span className="dot" />Julien Roussel, fondateur &amp; ébéniste</div>
+            <div className="phil-sign"><span className="dot" aria-hidden="true" />Julien Roussel, fondateur &amp; ébéniste</div>
           </div>
         </div>
       </section>
