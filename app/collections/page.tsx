@@ -56,6 +56,7 @@ export default function Collections() {
     <>
       <ClientEffects />
       <Header />
+      <main>
       <section className="page-hero">
         <div className="wrap">
           <span className="eyebrow">{t("collections_eyebrow")}</span>
@@ -80,7 +81,7 @@ export default function Collections() {
                 </div>
                 <div className="coll-info">
                   <span className="eyebrow">{c.eyebrow}</span>
-                  <h3>{c.h3}</h3>
+                  <h2>{c.h3}</h2>
                   <p>{c.p}</p>
                 </div>
               </article>
@@ -129,6 +130,7 @@ export default function Collections() {
           <Link href="/contact#contact-form" className="cta-btn filled">{t("cta3_btn")}</Link>
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

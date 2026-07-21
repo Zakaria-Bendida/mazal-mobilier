@@ -52,6 +52,7 @@ export default function Services() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero photo" style={{ backgroundImage: "linear-gradient(180deg, rgba(26,23,20,0.3) 0%, rgba(26,23,20,0.85) 80%), url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?fm=jpg&q=60&w=1200&auto=format&fit=crop')" }}>
         <div className="wrap">
           <span className="eyebrow">{t("services_eyebrow")}</span>
@@ -95,7 +96,7 @@ export default function Services() {
             {processSteps.map((step, i) => (
               <div className="process-step reveal" key={i}>
                 <div className="process-step-num">{t(step.numKey)}</div>
-                <h4>{t(step.titleKey)}</h4>
+                <h3>{t(step.titleKey)}</h3>
                 <p>{t(step.descKey)}</p>
               </div>
             ))}
@@ -130,6 +131,7 @@ export default function Services() {
           <Link href="/contact" className="cta-btn filled reveal">{t("services_cta_btn")}</Link>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

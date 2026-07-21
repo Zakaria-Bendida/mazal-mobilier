@@ -14,6 +14,7 @@ export default function Home() {
       <ClientEffects />
       <Header />
 
+      <main>
       {/* HERO */}
       <section className="hero">
         <svg className="rings-bg" viewBox="0 0 900 900">
@@ -160,6 +161,7 @@ export default function Home() {
           <Link href="/contact" className="cta-btn filled">{t("cta_btn")}</Link>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

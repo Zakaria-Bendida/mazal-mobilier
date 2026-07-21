@@ -9,7 +9,7 @@ const legalStyles = {
   maxWidth: 760,
 } as const;
 
-const h3Style = {
+const h2Style = {
   fontSize: "1.15rem",
   fontWeight: 500,
   marginTop: 40,
@@ -45,6 +45,7 @@ export default function Mentions() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero" style={{ paddingBottom: 48 }}>
         <div className="wrap">
           <span className="eyebrow">Informations légales</span>
@@ -54,7 +55,7 @@ export default function Mentions() {
 
       <section>
         <div className="wrap" style={legalStyles}>
-          <h3 style={h3Style}>{t("mentions_editeur")}</h3>
+          <h2 style={h2Style}>{t("mentions_editeur")}</h2>
           <p style={pStyle}>
             MAZAL Mobilier<br/>
             SARL au capital de 10 000 &euro;<br/>
@@ -65,14 +66,14 @@ export default function Mentions() {
             Directeur de la publication : [Nom du dirigeant]
           </p>
 
-          <h3 style={h3Style}>{t("mentions_hebergeur")}</h3>
+          <h2 style={h2Style}>{t("mentions_hebergeur")}</h2>
           <p style={pStyle}>
             [Nom de l&apos;hébergeur]<br/>
             [Adresse de l&apos;hébergeur]<br/>
             [Téléphone de l&apos;hébergeur]
           </p>
 
-          <h3 style={h3Style}>{t("mentions_propriete")}</h3>
+          <h2 style={h2Style}>{t("mentions_propriete")}</h2>
           <p style={pStyle}>
             L&apos;ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes, fichiers sons) est la propriété exclusive de MAZAL Mobilier ou de ses partenaires et est protégé par les lois algériennes et internationales relatives à la propriété intellectuelle.
           </p>
@@ -80,7 +81,7 @@ export default function Mentions() {
             Toute reproduction totale ou partielle de ce contenu est strictement interdite sans autorisation préalable écrite de MAZAL Mobilier.
           </p>
 
-          <h3 style={h3Style}>{t("mentions_donnees")}</h3>
+          <h2 style={h2Style}>{t("mentions_donnees")}</h2>
           <p style={pStyle}>
             Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée, vous disposez de droits sur vos données personnelles :
           </p>
@@ -95,22 +96,23 @@ export default function Mentions() {
             Pour exercer ces droits, contactez-nous à : <a href="mailto:atelier@grain-mobilier.fr" style={{ color: "var(--accent)" }}>atelier@grain-mobilier.fr</a>
           </p>
 
-          <h3 style={h3Style}>{t("mentions_cookies")}</h3>
+          <h2 style={h2Style}>{t("mentions_cookies")}</h2>
           <p style={pStyle}>
             Ce site utilise des cookies strictement nécessaires à son bon fonctionnement. Il ne collecte aucune donnée de navigation à des fins publicitaires ou de mesure d&apos;audience sans votre consentement explicite.
           </p>
 
-          <h3 style={h3Style}>{t("mentions_responsabilite")}</h3>
+          <h2 style={h2Style}>{t("mentions_responsabilite")}</h2>
           <p style={pStyle}>
             MAZAL Mobilier s&apos;efforce de fournir des informations aussi précises que possible sur ce site. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour.
           </p>
 
-          <h3 style={h3Style}>{t("mentions_droit")}</h3>
+          <h2 style={h2Style}>{t("mentions_droit")}</h2>
           <p style={pStyle}>
             Les présentes mentions légales sont régies par le droit algérien. En cas de litige, les tribunaux compétents seront ceux du ressort du siège social de MAZAL Mobilier.
           </p>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

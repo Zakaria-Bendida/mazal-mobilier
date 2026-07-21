@@ -17,21 +17,21 @@ export function Footer() {
           </div>
           <div className="foot-cols">
             <div className="foot-col">
-              <h4>Navigation</h4>
+              <h3>Navigation</h3>
               <Link href="/collections">Collections</Link>
               <Link href="/savoir-faire">Savoir-faire</Link>
               <Link href="/portfolio">Portfolio</Link>
               <Link href="/journal">Journal</Link>
             </div>
             <div className="foot-col">
-              <h4>Services</h4>
+              <h3>Services</h3>
               <Link href="/services#mobilier-sur-mesure">Mobilier sur mesure</Link>
               <Link href="/services#restauration">Restauration</Link>
               <Link href="/services#conseil-design">Conseil design</Link>
               <Link href="/contact#contact-form">Contact</Link>
             </div>
             <div className="foot-col">
-              <h4>Contact</h4>
+              <h3>Contact</h3>
               <a href="tel:+213555000000">+213 555 00 00 00</a>
               <a href="mailto:DevForge@gmail.com">DevForge@gmail.com</a>
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Alger, Algérie</a>

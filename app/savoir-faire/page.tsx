@@ -14,6 +14,7 @@ export default function SavoirFaire() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero">
         <div className="wrap">
           <span className="eyebrow">{t("savoir_eyebrow")}</span>
@@ -33,7 +34,7 @@ export default function SavoirFaire() {
             ].map((step, i) => (
               <div className="proc-item reveal" key={i}>
                 <div className="proc-num">{step.num}</div>
-                <div className="proc-title"><h3>{step.title}</h3></div>
+                <div className="proc-title"><h2>{step.title}</h2></div>
                 <div className="proc-desc">
                   <p>{step.desc}</p>
                   <div className="tags">
@@ -98,6 +99,7 @@ export default function SavoirFaire() {
           <Link href="/contact" className="cta-btn filled">{t("cta2_btn")}</Link>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

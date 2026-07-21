@@ -25,6 +25,7 @@ export default function Portfolio() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero photo" style={{ backgroundImage: "linear-gradient(180deg, rgba(26,23,20,0.3) 0%, rgba(26,23,20,0.85) 80%), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?fm=jpg&q=60&w=1200&auto=format&fit=crop')" }}>
         <div className="wrap">
           <span className="eyebrow">{t("portfolio_eyebrow")}</span>
@@ -51,7 +52,7 @@ export default function Portfolio() {
                 </div>
                 <div className="portfolio-meta">
                   <span className="eyebrow">{item.eyebrow}</span>
-                  <h3>{item.h3}</h3>
+                  <h2>{item.h3}</h2>
                   <p>{item.p}</p>
                   <span className="portfolio-date">{item.year}</span>
                 </div>
@@ -69,6 +70,7 @@ export default function Portfolio() {
           <a href="/contact" className="cta-btn filled reveal">{t("cta3_btn")}</a>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

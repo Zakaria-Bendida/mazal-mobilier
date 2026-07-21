@@ -23,6 +23,7 @@ export default function Journal() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero">
         <div className="wrap">
           <span className="eyebrow">{t("journal_eyebrow")}</span>
@@ -48,7 +49,7 @@ export default function Journal() {
                 </div>
                 <div className="journal-body">
                   <span className="eyebrow">{a.eyebrow}</span>
-                  <h3>{a.h3}</h3>
+                  <h2>{a.h3}</h2>
                   <p>{a.p}</p>
                   <div className="journal-meta">
                     <span>{a.read}</span>
@@ -70,6 +71,7 @@ export default function Journal() {
           <Link href="/contact" className="cta-btn filled reveal">{t("cta5_btn")}</Link>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

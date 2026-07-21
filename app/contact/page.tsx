@@ -30,6 +30,7 @@ export default function Contact() {
       <ClientEffects />
       <Header />
 
+      <main>
       <section className="page-hero">
         <div className="wrap">
           <span className="eyebrow">{t("contact_eyebrow")}</span>
@@ -67,24 +68,25 @@ export default function Contact() {
 
           <div className="contact-info">
             <div className="info-block reveal">
-              <h4>{t("contact_info_title")}</h4>
+              <h2>{t("contact_info_title")}</h2>
               <p>14, Rue des Artisans<br/>Bab Ezzouar, Alger</p>
             </div>
             <div className="info-block reveal">
-              <h4>{t("contact_info_visit")}</h4>
+              <h2>{t("contact_info_visit")}</h2>
               <p>{t("contact_info_visit_desc")}</p>
             </div>
             <div className="info-block reveal">
-              <h4>{t("contact_info_hours")}</h4>
+              <h2>{t("contact_info_hours")}</h2>
               <p>{t("contact_info_hours_desc")}</p>
             </div>
             <div className="info-block reveal">
-              <h4>{t("contact_info_delay")}</h4>
+              <h2>{t("contact_info_delay")}</h2>
               <p>{t("contact_info_delay_desc")}</p>
             </div>
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>
