@@ -39,7 +39,7 @@ export function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span>&copy; 2024 MAZAL Mobilier. Tous droits réservés.</span>
+          <span>&copy; 2026 MAZAL Mobilier. Tous droits réservés.</span>
           <div style={{ display: "flex", gap: 20 }}>
             <Link href="/mentions">Mentions légales</Link>
             <a href="#">Politique de confidentialité</a>

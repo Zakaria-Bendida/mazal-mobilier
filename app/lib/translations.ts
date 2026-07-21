@@ -156,7 +156,7 @@ export const translations: Record<string, Record<string, string>> = {
     footer_restauration: "Restauration",
     footer_conseil: "Conseil design",
     footer_contact: "Contact",
-    footer_droits: "© 2024 MAZAL Mobilier. Tous droits réservés.",
+    footer_droits: "© 2026 MAZAL Mobilier. Tous droits réservés.",
     footer_mentions: "Mentions légales",
     footer_confidentialite: "Politique de confidentialité",
 
@@ -424,7 +424,7 @@ export const translations: Record<string, Record<string, string>> = {
     footer_restauration: "Restoration",
     footer_conseil: "Design consulting",
     footer_contact: "Contact",
-    footer_droits: "© 2024 MAZAL Furniture. All rights reserved.",
+    footer_droits: "© 2026 MAZAL Furniture. All rights reserved.",
     footer_mentions: "Legal notice",
     footer_confidentialite: "Privacy policy",
 
