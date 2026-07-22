@@ -25,8 +25,10 @@ export default function Collections() {
 
   useEffect(() => {
     if (selected !== null) {
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      const scrollY = window.scrollY;
+      document.documentElement.style.position = "fixed";
+      document.documentElement.style.inset = "0";
+      document.documentElement.style.top = `-${scrollY}px`;
       const preventScroll = (e: TouchEvent) => {
         if (!(e.target as HTMLElement).closest(".detail-body")) {
           e.preventDefault();
@@ -34,9 +36,11 @@ export default function Collections() {
       };
       document.addEventListener("touchmove", preventScroll, { passive: false });
       return () => {
-        document.documentElement.style.overflow = "";
-        document.body.style.overflow = "";
+        document.documentElement.style.position = "";
+        document.documentElement.style.inset = "";
+        document.documentElement.style.top = "";
         document.removeEventListener("touchmove", preventScroll);
+        window.scrollTo(0, scrollY);
       };
     }
   }, [selected]);
