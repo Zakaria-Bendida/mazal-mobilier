@@ -20,10 +20,8 @@ export default function Home() {
 
   useEffect(() => {
     if (selected !== null) {
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${window.scrollY}px`;
-      document.body.style.width = "100%";
       const preventScroll = (e: TouchEvent) => {
         if (!(e.target as HTMLElement).closest(".detail-body")) {
           e.preventDefault();
@@ -31,16 +29,10 @@ export default function Home() {
       };
       document.addEventListener("touchmove", preventScroll, { passive: false });
       return () => {
-        const scrollY = document.body.style.top;
+        document.documentElement.style.overflow = "";
         document.body.style.overflow = "";
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.width = "";
         document.removeEventListener("touchmove", preventScroll);
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
       };
-    } else {
-      document.body.style.overflow = "";
     }
   }, [selected]);
 
